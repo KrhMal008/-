@@ -14,5 +14,6 @@ foreach(src ${SOURCES})
     get_filename_component(dirname ${dir} NAME)
     string(MAKE_C_IDENTIFIER "${dirname}_${fname}" id)
     string(REGEX REPLACE "_+" "_" id ${id})
-    add_executable("${i}${id}" ${src})
+    add_executable("${i}${id}" ${src}
+            "контрольная работа 3/mainkr3.cpp")
 endforeach()
